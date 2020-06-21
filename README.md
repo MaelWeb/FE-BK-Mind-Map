@@ -1,2 +1,3 @@
-# FE-BK-Mind-Map
-前端基础知识思维导图(Front-end basic knowledge mind map)。
+# 前端基础知识思维导图(Front-end basic knowledge mind map)。
+
+> 最近在“重学前端”，基于自己的复习的知识点，整理了一份思维导图。觉得不错的话给个Star🌟，知识点有错误或者思维导图有不合理的地方，或者你有需要补充的知识点欢迎给我提PR。
