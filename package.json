@@ -1,0 +1,23 @@
+{
+  "name": "fe-bk-mind-map",
+  "version": "1.0.0",
+  "description": "> 最近在“重学前端”，基于自己的复习的知识点，整理了一份思维导图。觉得不错的话给个Star🌟，知识点有错误或者思维导图有不合理的地方，或者你有需要补充的知识点欢迎给我提PR。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "online": "gh-pages -d online/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaelWeb/FE-BK-Mind-Map.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaelWeb/FE-BK-Mind-Map/issues"
+  },
+  "homepage": "https://github.com/MaelWeb/FE-BK-Mind-Map#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
