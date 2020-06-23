@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html,
+body {
+    height: auto;
+    width: auto;
+}
+img {
+    width: 200%;
+    display: block;
+}

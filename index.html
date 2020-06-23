@@ -4,24 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>前端基础知识图谱</title>
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-            html,
-            body {
-                height: auto;
-                width: auto;
-            }
-            img {
-                width: 200%;
-                display: block;
-            }
-        </style>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/pace/1.0.2/themes/black/pace-theme-center-atom.min.css">
+        <script src="https://cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+        <link rel="stylesheet" href="./index.css">
     </head>
     <body>
-        <img id="svg" src="./前端基础.svg" />
+        <img id="svg" src="./前端基础.svg" onload="loadImage()" />
         <script>
             window.onload = function () {
                 var imgDom = document.getElementById("svg")
@@ -67,6 +55,10 @@
                 //     },
                 //     false
                 // )
+            }
+
+            function loadImage() {
+                
             }
         </script>
     </body>
