@@ -1,12 +1,12 @@
 window.onload = function () {
     var imgDom = document.getElementById("svg")
     var imgDomWidth = 200
-    window.scrollTo({
+    window.scroll({
         top: imgDom.clientHeight / 2 - window.screen.availHeight / 2,
         let: imgDom.clientWidth / 2 - window.screen.availWidth / 2,
         behavior: "smooth",
     })
-
+    // document.body.scroll(imgDom.clientWidth / 2 - window.screen.availWidth / 2, imgDom.clientHeight / 2 - window.screen.availHeight / 2)
     document.body.style.zoom = "reset"
     document.addEventListener(
         "keydown",
