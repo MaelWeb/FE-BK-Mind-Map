@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "online": "gh-pages -d online/",
-    "build": "gulp"
+    "online": "gulp && gh-pages -d dist/"
   },
   "repository": {
     "type": "git",

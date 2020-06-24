@@ -34,7 +34,7 @@ function html() {
                 }
             )
         )
-        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
         .pipe(dest(dist))
 }
 
@@ -59,7 +59,7 @@ function image() {
 }
 
 function del() {
-    return src(dist, { read: false }).pipe(clean())
+    return src(dist, { read: false, allowEmpty: true }).pipe(clean())
 }
 
 function upload() {
@@ -70,7 +70,7 @@ function upload() {
                 secretKey: "",
                 bucket: "mm-liayal-com",
                 origin: "mm.liayal.com",
-                uploadURL: 'up-z2.qiniup.com'                
+                uploadURL: 'up-z2.qiniup.com',
             },
             forceUpload: true,
         })
