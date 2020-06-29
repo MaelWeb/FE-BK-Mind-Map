@@ -23,8 +23,11 @@ window.onload = function () {
                 event.preventDefault()
                 console.log(event.which)
 
-                if (event.which === 187) {
+                if ( event.which === 61 || event.which === 107 || event.which === 187) {
                     imgDomWidth = imgDomWidth + 10
+                    imgDom.style.width = imgDomWidth + "%"
+                } else {
+                    imgDomWidth = imgDomWidth - 10
                     imgDom.style.width = imgDomWidth + "%"
                 }
             }
