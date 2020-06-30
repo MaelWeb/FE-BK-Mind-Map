@@ -23,7 +23,7 @@ window.onload = function () {
                 event.preventDefault()
                 console.log(event.which)
 
-                if ( event.which === 61 || event.which === 107 || event.which === 187) {
+                if (event.which === 61 || event.which === 107 || event.which === 187) {
                     imgDomWidth = imgDomWidth + 10
                     imgDom.style.width = imgDomWidth + "%"
                 } else {
@@ -34,6 +34,17 @@ window.onload = function () {
         },
         false
     )
+    var hasClickTip = window.localStorage.getItem('clickLog')
+
+    if (!hasClickTip) {
+        var tipsDom = document.querySelector('.J-tips')
+        tipsDom.style.display = 'block'
+
+        tipsDom.addEventListener('click', function() {
+            window.localStorage.setItem('clickLog', true)
+            tipsDom.style.display = 'none'
+        })
+    }
     // document.addEventListener(
     //     "mousewheel DOMMouseScroll",
     //     function (event) {
@@ -44,5 +55,3 @@ window.onload = function () {
     //     false
     // )
 }
-
-function loadImage() {}

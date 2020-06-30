@@ -21,6 +21,7 @@ function html() {
                 }),
                 {
                     transform: function (filepath) {
+                        console.log(filepath)
                         if (filepath.slice(-4) === ".svg") {
                             return '<img id="svg" src="' + filepath + '" />'
                         }
@@ -31,6 +32,8 @@ function html() {
                         )
                     },
                     ignorePath: "dist/",
+                    addPrefix: '//mm.liayal.com',
+                    addRootSlash: false
                 }
             )
         )
