@@ -69,8 +69,8 @@ function upload() {
     return src(dist + "/*").pipe(
         qiniuCDN({
             qiniu: {
-                accessKey: "v6NxwNQtqVpK0Z51X0iq-YXv0Fo8qlFcVxnlYbO6",
-                secretKey: "b5p89rqZeO8KJEjEvOp3Pk2fHtKEToE5PdSmQLRq",
+                accessKey: "",
+                secretKey: "",
                 bucket: "mm-liayal-com",
                 origin: "mm.liayal.com",
                 uploadURL: 'up-z2.qiniup.com',
