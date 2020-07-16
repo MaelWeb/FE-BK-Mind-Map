@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "online": "gulp && gh-pages -d dist/",
     "gulp": "gulp",
-    "ghp":  "gh-pages -d dist/"
+    "ghp": "gh-pages -d dist/"
   },
   "repository": {
     "type": "git",
