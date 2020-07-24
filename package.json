@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "online": "gulp && gh-pages -d dist/",
     "gulp": "gulp",
+    "upload": "gulp upload",
     "ghp": "gh-pages -d dist/"
   },
   "repository": {
@@ -33,5 +34,10 @@
     "gulp-qiniu-up": "^1.0.2",
     "gulp-uglify": "^3.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "gulp-babel": "^8.0.0",
+    "workbox-build": "^5.1.3"
+  }
 }
