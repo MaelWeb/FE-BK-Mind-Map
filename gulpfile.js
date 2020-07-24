@@ -110,4 +110,5 @@ exports.js = js
 exports.js = image
 exports.css = css
 exports.html = html
+exports.upload = upload
 exports.default = series(del, css, image, js, html, generateServiceWorker, upload)
