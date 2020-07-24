@@ -9,6 +9,8 @@ const concat = require("gulp-concat")
 const uglify = require("gulp-uglify")
 const inject = require("gulp-inject")
 const clean = require("gulp-clean")
+const workbox = require('workbox-build')
+const babel = require('gulp-babel');
 
 const dist = "dist"
 
@@ -51,7 +53,10 @@ function css() {
 
 function js() {
     return src("online/*.js", { sourcemaps: true })
-        .pipe(concat("app.min.js"))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        // .pipe(concat("app.min.js"))
         .pipe(uglify())
         .pipe(hash())
         .pipe(dest(dist, { sourcemaps: true }))
@@ -80,8 +85,29 @@ function upload() {
     )
 }
 
+
+function generateServiceWorker() {
+    return workbox.generateSW({
+        globDirectory: dist,
+        globPatterns: [
+          '\*\*/\*.{html,js,svg,png,css}'
+        ],
+        swDest: `${dist}/sw.js`,
+        clientsClaim: true,
+        skipWaiting: true
+    }).then(({warnings}) => {
+        // In case there are any warnings from workbox-build, log them.
+        for (const warning of warnings) {
+          console.warn(warning);
+        }
+        console.info('Service worker generation completed.');
+    }).catch((error) => {
+        console.warn('Service worker generation failed:', error);
+    });
+}
+
 exports.js = js
 exports.js = image
 exports.css = css
 exports.html = html
-exports.default = series(del, css, image, js, html, upload)
+exports.default = series(del, css, image, js, html, generateServiceWorker, upload)
