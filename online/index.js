@@ -27,16 +27,16 @@ window.onload = function () {
   //       },
   //       false
   //   )
-    var hasClickTip = window.localStorage.getItem('clickLog')
+    var hasClickTip = window.localStorage.getItem('K_Click_Log')
+    var tipsDom = document.querySelector('.J-tips')
 
     if (!hasClickTip) {
-        var tipsDom = document.querySelector('.J-tips')
-        tipsDom.style.display = 'block'
-
         tipsDom.addEventListener('click', function() {
-            window.localStorage.setItem('clickLog', true)
+            window.localStorage.setItem('K_Click_Log', true)
             tipsDom.style.display = 'none'
         })
+    } else {
+      tipsDom.style.display = 'none'
     }
 }
 

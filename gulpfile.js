@@ -73,11 +73,11 @@ function js() {
     .pipe(dest(dist, { sourcemaps: true }));
 }
 
-function pdf() {
-  return src("./FE-BK-Mind-Map.pdf")
+function source() {
+  return src("./FE-BK-Mind-Map.*")
     .pipe(
       hash({
-        format: "{name}.{hash:8}{ext}",
+        format: "{name}-{ctime:10}{ext}",
       })
     )
     // .pipe(imagemin())
@@ -126,14 +126,14 @@ function generateServiceWorker() {
 }
 
 exports.js = js;
-exports.pdf = pdf;
+exports.source = source;
 exports.css = css;
 exports.html = html;
 exports.upload = upload;
 exports.default = series(
   del,
   css,
-  pdf,
+  source,
   js,
   html,
   generateServiceWorker,
