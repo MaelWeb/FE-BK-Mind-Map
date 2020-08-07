@@ -1,4 +1,4 @@
-![Front-end basic knowledge mind map](https://mm.liayal.com/title-bg.png)
+![Front-end basic knowledge mind map](./title-bg.png)
 
 > 一份详细的前端基础知识思维导图。
 
